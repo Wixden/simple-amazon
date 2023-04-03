@@ -1,0 +1,31 @@
+.header {
+  background-color: #1c2b35;
+  padding: 20px 10px;
+}
+
+.navbar {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.menu-list {
+  display: flex;
+  gap: 25px;
+  list-style-type: none;
+}
+
+.menu-item {
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: 0.005em;
+}
