@@ -10,11 +10,11 @@ const Header = () => {
         <div className='logo'><img src={logo} alt="" /></div>
 
         {/* Menu */}
-        <ul className='menu-list'>
-          <li className='menu-item'>Order</li>
-          <li className='menu-item'>Order Review</li>
-          <li className='menu-item'>Manage Inventory</li>
-          <li className='menu-item'>Login</li>
+        <ul className='menu__list'>
+          <li className='menu__item'>Order</li>
+          <li className='menu__item'>Order Review</li>
+          <li className='menu__item'>Manage Inventory</li>
+          <li className='menu__item'>Login</li>
         </ul>
       </nav>
     </header>
