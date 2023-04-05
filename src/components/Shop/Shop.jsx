@@ -36,7 +36,6 @@ const Shop = () => {
 
     for (const id in storedProduct) {
       const savedProduct = products.find((product) => product.id === id);
-      console.log(savedProduct);
 
       if (savedProduct) {
         const quantity = storedProduct[id];
@@ -48,7 +47,22 @@ const Shop = () => {
   }, [products]);
 
   const handleAddToCart = (product) => {
-    const newCart = [...cartItem, product];
+    // const newCart = [...cartItem, product];
+
+    let newCart = [];
+
+    const exist = cartItem.find((pd) => product.id === pd.id);
+    // Returns the product item with matching id.
+
+    if (!exist) {
+      product.quantity = 1;
+      newCart = [...cartItem, product];
+    } else {
+      exist.quantity = exist.quantity + 1;
+      const remaining = cartItem.filter((pd) => product.id !== pd.id);
+      newCart = [...remaining, exist];
+    }
+
     setCartItem(newCart);
     addToDb(product.id);
   };
