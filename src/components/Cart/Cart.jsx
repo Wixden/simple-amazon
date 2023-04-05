@@ -5,7 +5,6 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const Cart = ({ cartItem }) => {
-  console.log(cartItem);
   // const cartItem = props.cartItem; //Option 2
   // const { cartItem } = props; //Option 3
 
